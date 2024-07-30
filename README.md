@@ -3,7 +3,7 @@
 
 #### This is a very lightweight system designed to simplify Montage RPC and avoid using `BP_Notify`. 
 #### In the example, includes `weapon switching` & `attack` & `combo` & `hitreact` & `weapon trials` & `weapon trace`
-#### Add the component to any Actor, such as `BP_Weapon`, `BP_Character`, `BP_Ability`, etc.
+#### Add component `CT_Cmpt_Montage` to any Actor, such as `BP_Weapon`, `BP_Character`, `BP_Ability`, etc.
 ![image](https://github.com/user-attachments/assets/8de464b4-dc00-4335-9650-b387a82d428f)
 
 
