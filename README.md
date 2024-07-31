@@ -17,7 +17,7 @@
 
 
 # Why Avoid Using `BP_Notify`?
-#### Usually, you might create a large number of `Notify` or `NotifyState` to handle events in Montages. Many of these Notify might only be used once or just call other functions via `Cast to XXXCharacter` and `GetComponentByClass`. This can lead to an excessive number of Notify files, making the project difficult to maintain.
+#### Usually, you might create a large number of `Notify` or `NotifyState` to handle  Montage events. Many of these Notify might only be used once or just call other functions via `Cast to XXXCharacter` and `GetComponentByClass`. This can lead to an excessive number of Notify files, making the project difficult to maintain.
 #### Additionally, changing values or resource files at runtime in `BP_Notify` is not easy.
 ![image](https://github.com/user-attachments/assets/71d3a403-e4cd-40b3-86f6-5ec692fbde79)
 
