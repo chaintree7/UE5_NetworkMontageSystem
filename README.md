@@ -3,9 +3,11 @@
 
 ### This is a very lightweight system designed to simplify Montage RPC and avoid using `BP_Notify`. 
 #### In the example, includes `weapon switching` & `attack` & `combo` & `hitreact` & `weapon trials` & `weapon trace`
+
+
+## Usage
 #### Add component `CT_Cmpt_Montage` to any Actor, such as `BP_Weapon`, `BP_Character`, `BP_Ability`, etc.
 ![image](https://github.com/user-attachments/assets/8de464b4-dc00-4335-9650-b387a82d428f)
-
 
 
 #### Regular Montage RPC
@@ -17,13 +19,24 @@
 
 
 
+# Network Options
+![image](https://github.com/user-attachments/assets/eb6f5250-987c-4fd0-a8b2-bd17ab731a75)
+
+## NetworkPriority
+#### Server: Montage will be played on the server first and then multicast to all clients
+#### OwningClient: montage will be played on the OwningClient first, then played on Server, and finally Multicast to other Clients
+
+## NetworkDelayOffset 
+#### If True, When network is bad, the montage will not play completely.
+#### For example, you played a 1-second Montage, and another client network delay is 0.5-seconds. this client saw montage played starting from 0.5
+
+
+
 # Why Avoid Using `BP_Notify`?
-#### Usually, you might create a large number of `Notify` or `NotifyState` to handle  Montage events. Many of these Notify might only be used once or just call other functions via `Cast to XXXCharacter` and `GetComponentByClass`. This can lead to an excessive number of Notify files, making the project difficult to maintain.
-#### Additionally, changing values or resource files at runtime in `BP_Notify` is not easy.
-![image](https://github.com/user-attachments/assets/71d3a403-e4cd-40b3-86f6-5ec692fbde79)
+#### Usually most BP_Notify are not universal, but belong to the logic of the current Montage. For example, `Weapon Hit Trace` and `Weapon Trails` should be the logic contained in BP_Actor_Weapon. Creating a large number of BP_Notify will make the project difficult to maintain.
+#### Additionally, changing values or resource files at runtime in `BP_Notify` is not easy. my suggestion is to handle Notify in Actor, this is just a suggestion, it's up to you
 
-
-#### In this component, I recommend using the built-in `MontageNotify` and `MontageNotifyWindow`.
+#### using the built-in `MontageNotify` and `MontageNotifyWindow`.
 ![image](https://github.com/user-attachments/assets/932d2a28-c733-4560-a1dd-bdb89f0a2a31)
 
 #### Then handle Notifys through the component's Events. This way, all the logic of the Montage can be kept in one BP_Actor, and you can easily modify the values and resource files at runtime.
@@ -39,14 +52,3 @@
 ![image](https://github.com/user-attachments/assets/8ffc1305-f9ae-40ae-9233-bb0786de5a22)
 
 
-
-# Network Options
-![image](https://github.com/user-attachments/assets/eb6f5250-987c-4fd0-a8b2-bd17ab731a75)
-
-## NetworkPriority
-#### Server: Montage will be played on the server first and then multicast to all clients
-#### OwningClient: montage will be played on the OwningClient first, then played on Server, and finally Multicast to other Clients
-
-## NetworkDelayOffset 
-#### If True, When network is bad, the montage will not play completely.
-#### For example, you played a 1-second Montage, and another client network delay is 0.5-seconds. this client saw montage played starting from 0.5
