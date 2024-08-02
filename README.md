@@ -13,7 +13,8 @@
 
 
 #### RPC in MontageSystem
-![image](https://github.com/user-attachments/assets/5a807ef6-c32e-4818-a85e-4e0d5505d414)
+![image](https://github.com/user-attachments/assets/f23fab7a-1661-423c-a272-e140691cb03c)
+
 
 
 # Why Avoid Using `BP_Notify`?
@@ -26,7 +27,8 @@
 ![image](https://github.com/user-attachments/assets/932d2a28-c733-4560-a1dd-bdb89f0a2a31)
 
 #### Then handle Notifys through the component's Events. This way, all the logic of the Montage can be kept in one BP_Actor, and you can easily modify the values and resource files at runtime.
-![image](https://github.com/user-attachments/assets/9dccb835-dc5e-4842-b2ea-7feb9eb302d5)
+![image](https://github.com/user-attachments/assets/ac4bc0f3-868f-4cd5-aff4-c0c4f77278ce)
+
 
 
 
@@ -36,3 +38,15 @@
 #### In short, they are events within PlayMontage.
 ![image](https://github.com/user-attachments/assets/8ffc1305-f9ae-40ae-9233-bb0786de5a22)
 
+
+
+# Network Options
+![image](https://github.com/user-attachments/assets/eb6f5250-987c-4fd0-a8b2-bd17ab731a75)
+
+## NetworkPriority
+#### Server: Montage will be played on the server first and then multicast to all clients
+#### OwningClient: montage will be played on the OwningClient first, then played on Server, and finally Multicast to other Clients
+
+## NetworkDelayOffset 
+#### If True, When network is bad, the montage will not play completely.
+#### For example, you played a 1-second Montage, and another client network delay is 0.5-seconds. this client saw montage played starting from 0.5
