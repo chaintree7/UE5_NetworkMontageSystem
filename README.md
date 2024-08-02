@@ -2,7 +2,7 @@
 # Event-Driven Montage System 
 
 ### This is a very lightweight system designed to simplify Montage RPC and avoid using `BP_Notify`. 
-#### In the example, includes `weapon switching` & `attack` & `combo` & `hitreact` & `weapon trials` & `weapon trace`
+#### In the example, includes `weapon switching` & `attack` & `combo` & `hitreact` & `weapon trails` & `weapon hit trace`
 
 
 ## Usage
@@ -23,8 +23,8 @@
 ![image](https://github.com/user-attachments/assets/eb6f5250-987c-4fd0-a8b2-bd17ab731a75)
 
 ## NetworkPriority
-#### Server: Montage will be played on the server first and then multicast to all clients
-#### OwningClient: montage will be played on the OwningClient first, then played on Server, and finally Multicast to other Clients
+#### `Server`: Montage will be played on the server first and then multicast to all clients
+#### `OwningClient`: montage will be played on the OwningClient first, then played on Server, and finally Multicast to other Clients
 
 ## NetworkDelayOffset 
 #### If True, When network is bad, the montage will not play completely.
