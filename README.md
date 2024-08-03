@@ -27,8 +27,8 @@
 #### `OwningClient`: montage will be played on the OwningClient first, then played on Server, and finally Multicast to other Clients
 
 ## NetworkDelayOffset 
-#### If True, When network is bad, the montage will not play completely.
-#### For example, you played a 1-second Montage (`NetworkPriority=OwningClient`), and another client network delay is 0.5-second. This will ensure that other clients are at the same progress as your montage
+#### If True, When network is bad, Other clients will skip the delayed time
+#### For example, you played a 1-second Montage (`NetworkPriority=OwningClient`), and another client network delay is 0.5-second. this client will saw your montage is played starting from 0.5. This will ensure that other clients are at the same progress as your montage
 
 
 
