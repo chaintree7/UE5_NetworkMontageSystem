@@ -1,5 +1,5 @@
 
-# Event-Driven Montage System 
+# Event-Driven Network Montage System 
 
 ### This is a lightweight component, it simplifies the Montage RPC process and use events to handle Montage's logic
 #### In the example, includes `weapon switching` & `attack` & `combo` & `hitreact` & `weapon trails` & `weapon hit trace`
