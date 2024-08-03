@@ -39,9 +39,11 @@
 #### using the built-in `MontageNotify` and `MontageNotifyWindow`.
 ![image](https://github.com/user-attachments/assets/932d2a28-c733-4560-a1dd-bdb89f0a2a31)
 
-#### Then handle Notifys through the component's Events. This way, all the logic of the Montage can be kept in one BP_Actor, and you can easily modify the values and resource files at runtime.
+#### Then handle Notifys through the component's Events. This way, all the logic of the Montage can be kept in one BP_Actor
 ![image](https://github.com/user-attachments/assets/ac4bc0f3-868f-4cd5-aff4-c0c4f77278ce)
 
+#### There is a useful function `NotifyStartsWith?` in the component. It's used to split NotifyName and allowing you to easily handle complex Notify
+![image](https://github.com/user-attachments/assets/fa6a5d72-6443-4911-b1b7-b61bdfd912b8)
 
 
 
