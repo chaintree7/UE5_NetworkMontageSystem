@@ -28,7 +28,7 @@
 
 ## NetworkDelayOffset 
 #### If True, When network is bad, the montage will not play completely.
-#### For example, you played a 1-second Montage, and another client network delay is 0.5-seconds. this client saw montage played starting from 0.5
+#### For example, you played a 1-second Montage (`NetworkPriority=OwningClient`), and another client network delay is 0.5-second. This will ensure that other clients are at the same progress as your montage
 
 
 
