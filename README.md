@@ -1,7 +1,7 @@
 
 # Event-Driven Montage System 
 
-### This is a very lightweight system designed to simplify Montage RPC and avoid using `BP_Notify`. 
+### This is a lightweight component, it simplifies the Montage RPC process and use events to handle Montage's logic
 #### In the example, includes `weapon switching` & `attack` & `combo` & `hitreact` & `weapon trails` & `weapon hit trace`
 
 
@@ -32,9 +32,9 @@
 
 
 
-# Why Avoid Using `BP_Notify`?
-#### Usually most BP_Notify are not universal, but belong to the logic of the current Montage. For example, `Weapon Hit Trace` and `Weapon Trails` should be the logic contained in BP_Actor_Weapon. Creating a large number of BP_Notify will make the project difficult to maintain.
-#### Additionally, changing values or resource files at runtime in `BP_Notify` is not easy. my suggestion is to handle Notify in Actor, this is just a suggestion, it's up to you
+# Handle `Notify` in `Actor`
+#### I prefer to handle Notify in Actor instead of creating `BP_Notify` files because in `Actor` can easily modify values ​​and change resource files at runtime.
+#### In the example. I created a BP_Weapon that handles `Combo` & `Weapon Trails` & `HitTrace` notifies, and then used `Child Class` to change Trails FX. I think this way is more flexible and clean. This is just optional, you can also use BP_Notify if you want
 
 #### using the built-in `MontageNotify` and `MontageNotifyWindow`.
 ![image](https://github.com/user-attachments/assets/932d2a28-c733-4560-a1dd-bdb89f0a2a31)
