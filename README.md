@@ -1,3 +1,7 @@
+# Unreal Marketplace Version
+#### Marketplace rules don't allow blueprints as free assets, so the MP version price is set to $5
+#### https://www.unrealengine.com/marketplace/en-US/product/event-driven-network-montage-system
+#### Discord Support: https://discord.gg/FrBMHSJGkM
 
 # Event-Driven Network Montage System 
 
