@@ -24,6 +24,7 @@
 ![image](https://github.com/user-attachments/assets/eb6f5250-987c-4fd0-a8b2-bd17ab731a75)
 
 ## NetworkPriority
+#### `None`: No replication
 #### `Server`: Montage will be played on the server first and then multicast to all clients
 #### `OwningClient`: montage will be played on the OwningClient first, then played on Server, and finally Multicast to other Clients
 
